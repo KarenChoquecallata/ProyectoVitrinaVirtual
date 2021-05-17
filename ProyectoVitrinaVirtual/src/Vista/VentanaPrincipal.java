@@ -2,14 +2,16 @@ package Vista;
 
 import javax.swing.JFrame;
 
+import Controlador.ControladorIngresoAnuncios;
+
 public class VentanaPrincipal extends JFrame{
 
 	public VentanaPrincipal() {
 		// TODO Auto-generated constructor stub
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setTitle("Vitrina Virtual");
+		setTitle("VITRINA VIRTUAL ESTUDIANTIL");
 		setResizable(false);
-		setSize(1037,650);
+		setSize(1050,650);
 		PanelPrincipal panel = new PanelPrincipal();
 		add(panel);
 	}
