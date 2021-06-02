@@ -1,11 +1,12 @@
 package Vista;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.TextArea;
 import java.awt.TextField;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -15,7 +16,7 @@ import javax.swing.border.LineBorder;
 
 import Controlador.ControladorIngresoAnuncios;
 
-public class PanelAnuncio extends JPanel{
+public class PanelAnuncio extends JPanel {
     JLabel labeltitulo;
     JLabel labeldescripcion;
     JLabel labelcategoria;
@@ -32,8 +33,8 @@ public class PanelAnuncio extends JPanel{
 		
 		setLayout(new BorderLayout());
 		setBackground(Color.WHITE);
-		aceptar = new JButton("ACEPTAR");
-		cancelar = new JButton("Cancelar");
+		aceptar = new JButton();
+		cancelar = new JButton();
 		botones = new JPanel();
 		cuerpo = new JPanel();
 		encabezado = new JPanel();
@@ -46,7 +47,12 @@ public class PanelAnuncio extends JPanel{
 		descripcion = new TextArea(5,300);
 		combo1=new JComboBox<String>();
 		
-        combo1.setBounds(10,10,80,20);
+		aceptar.setIcon(new ImageIcon(PanelPrincipal.class.getResource("/imagenes/botonaceptar.png")));
+		cancelar.setIcon(new ImageIcon(PanelPrincipal.class.getResource("/imagenes/botoncancelar.png")));
+		aceptar.setBorder(null);
+		cancelar.setBorder(null);
+		
+		combo1.setBounds(10,10,80,20);
       
         combo1.addItem("IMPORTANTE");
         combo1.addItem("ADMINISTRATIVO");
@@ -58,12 +64,13 @@ public class PanelAnuncio extends JPanel{
 		
 	}
 	public void inicializarComponentes() {
-		labeltitulo.setBounds(250, 40, 200, 30);
-		titulo.setBounds(250, 80, 400, 30);
-		labeldescripcion.setBounds(250, 120, 400, 30);
-		descripcion.setBounds(250, 160, 400, 80);
-		labelcategoria.setBounds(400,  80, 200, 30);
-		combo1.setBounds(700, 80,200, 24);
+		setBounds(27,27, 840, 500);
+		labeltitulo.setBounds(150, 40, 200, 30);
+		titulo.setBounds(150, 80, 400, 30);
+		labeldescripcion.setBounds(150, 120, 400, 30);
+		descripcion.setBounds(150, 160, 400, 150);
+		labelcategoria.setBounds(600,  40, 200, 30);
+		combo1.setBounds(600, 80,200, 24);
 		aceptar.setBackground(Color.WHITE);
 		cancelar.setBackground(Color.WHITE);
 		botones.setBackground(Color.white);
@@ -87,7 +94,7 @@ public class PanelAnuncio extends JPanel{
 		botones.add(cancelar);
 		add(cuerpo, BorderLayout.CENTER);
 		add(botones, BorderLayout.SOUTH);
-	    add(encabezado, BorderLayout.NORTH);
+	   // add(encabezado, BorderLayout.NORTH);
 		
 	}
     public void setControlador(ControladorIngresoAnuncios controlador) {
