@@ -1,5 +1,6 @@
 package Main;
 
+import Modelo.Anuncio;
 import Vista.VentanaPrincipal;
 
 public class Main {
@@ -8,7 +9,6 @@ public class Main {
 		// TODO Auto-generated method stub
 		VentanaPrincipal window = new VentanaPrincipal();
 		window.setVisible(true);
-
+	  
 	}
-
 }

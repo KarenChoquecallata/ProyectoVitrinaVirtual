@@ -31,11 +31,7 @@ public class Invalido extends JPanel {
 		btnNewButtonReintentar.setIcon(new ImageIcon(PanelPrincipal.class.getResource("/imagenes/botonrein.png")));
 		btnNewButtonReintentar.setBackground(Color.white);
 		btnNewButtonReintentar.setBorder(null);
-//		btnNewButtonReintentar.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent arg0) {
-//				Login log=new Login();
-//			}
-//		});
+
 		btnNewButtonReintentar.setFont(new Font("Stencil", Font.PLAIN, 11));
 		btnNewButtonReintentar.setBounds(200, 250, 170, 70);
 		add(btnNewButtonReintentar);
@@ -44,15 +40,15 @@ public class Invalido extends JPanel {
 		btnNewButton.setIcon(new ImageIcon(PanelPrincipal.class.getResource("/imagenes/botoncancelar.png")));
 		btnNewButton.setBackground(Color.white);
 		btnNewButton.setBorder(null);
-//		btnNewButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent arg0) {
-//				//Se abre tu ventana de Pizarra
-//			}
-//		});
+
 		btnNewButton.setFont(new Font("Stencil", Font.PLAIN, 11));
 		btnNewButton.setBounds(380, 250, 170, 70);
 		add(btnNewButton);
 
+	}
+	public void iniciarAccion(PanelPrincipal panel) {
+		 btnNewButtonReintentar.addActionListener(panel);
+		 btnNewButton.addActionListener(panel);
 	}
 
 }

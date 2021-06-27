@@ -150,4 +150,16 @@ public class Login extends JPanel {
 //		}
 		return respuesta;
 		}
+	
+	  public void iniciarAccion(PanelPrincipal panel) {
+	    	
+		  AtrasButton.addActionListener(panel);
+		  IngresarButton.addActionListener(panel);
+			
+		}
+	  public void resetDatos() {
+		  textFieldUsuario.setText("");
+	      passwordFieldContraseña.setText("");
+	  }
+	  
 }

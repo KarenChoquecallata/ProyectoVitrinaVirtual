@@ -101,4 +101,13 @@ public class PanelAnuncio extends JPanel {
     	aceptar.addActionListener(controlador);
     	cancelar.addActionListener(controlador);
     }
+    public void iniciarAccion(PanelPrincipal panel) {
+    	
+     cancelar.addActionListener(panel);
+ 	 aceptar.addActionListener(panel);
+	}
+    public void resetDatos() {
+    	 titulo.setText(null);
+		 descripcion.setText(null);
+    }
 }

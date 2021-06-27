@@ -44,7 +44,13 @@ public class PanelOpciones extends JPanel{
 		add(borrar_anuncio);
 		visibilidad(false);
 	}
-
+    public void iniciarAccion(PanelPrincipal panel) {
+    	
+    	crear_anuncio.addActionListener(panel);
+ 	    borrar_anuncio.addActionListener(panel);
+ 	    confirmarEliminar.addActionListener(panel);
+		
+	}
 	public void setControlador(ControladorIngresoAnuncios controlador) {
 		crear_anuncio.addActionListener(controlador);
 		borrar_anuncio.addActionListener(controlador);

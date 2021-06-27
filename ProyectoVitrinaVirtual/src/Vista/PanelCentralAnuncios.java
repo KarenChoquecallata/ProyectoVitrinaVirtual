@@ -42,6 +42,7 @@ public class PanelCentralAnuncios extends JPanel{
 	}
 	
 	
+	
 	public void enlistarLista(ArrayList<PanelMostrarAnuncio> lista) {
 		for(int i = 0 ; i< lista.size();i++) {
 			add(lista.get(i));

@@ -13,6 +13,7 @@ public class VentanaPrincipal extends JFrame{
 		setResizable(false);
 		setSize(1050,650);
 		PanelPrincipal panel = new PanelPrincipal();
+		
 		add(panel);
 	}
 
